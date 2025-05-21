@@ -1,0 +1,186 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: fadeInTop 1s ease-out;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #cad9db;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+/* Hero Section (Updated) */
+section:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    /* Reduce space between image and text */
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    margin-left: 150px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+.hero-text p {
+    margin-left: 150px;
+    font-size: 1.2rem;
+    color: #cfcfcf;
+}
+
+/* Image Styling - removes outer glow and merges with background */
+.hero-image {
+    size: 1000px;
+    margin-right: 150px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 280px;
+    border-radius: 12px;
+    background-color: transparent;
+    /* Ensure background is transparent */
+    box-shadow: none;
+    /* Remove glowing effect */
+    display: block;
+    mix-blend-mode: normal;
+    /* Ensure the image blends well */
+}
+
+
+/* Bottom Content */
+.bottom-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.bottom-content div {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.2);
+    transition: transform 0.3s;
+}
+
+.bottom-content div:hover {
+    transform: translateY(-8px);
+}
+
+.bottom-content h3 {
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+.bottom-content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.bottom-content a:hover {
+    color: #00bcd4;
+}
+
+.bottom-content img {
+    width: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+/* Animations */
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
