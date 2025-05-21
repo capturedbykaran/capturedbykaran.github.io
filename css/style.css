@@ -43,6 +43,7 @@ nav a:hover {
 
 /* Hero Section */
 /* Hero Section (Updated) */
+
 section:first-of-type {
     display: flex;
     justify-content: space-between;
@@ -60,14 +61,14 @@ section:first-of-type {
 }
 
 .hero-text h1 {
-    margin-left: 150px;
+    margin-left: 10px;
     font-size: 3rem;
     margin-bottom: 20px;
     color: #00bcd4;
 }
 
 .hero-text p {
-    margin-left: 150px;
+    margin-left: 10px;
     font-size: 1.2rem;
     color: #cfcfcf;
 }
@@ -75,12 +76,12 @@ section:first-of-type {
 /* Image Styling - removes outer glow and merges with background */
 .hero-image {
     size: 1000px;
-    margin-right: 150px;
+    margin-left: 100px;
     flex-shrink: 0;
 }
 
 .hero-image img {
-    width: 280px;
+    width: 350px;
     border-radius: 12px;
     background-color: transparent;
     /* Ensure background is transparent */
@@ -90,6 +91,31 @@ section:first-of-type {
     mix-blend-mode: normal;
     /* Ensure the image blends well */
 }
+.about-me {
+  background-color: #1a1a1a; /* dark background */
+  color: #ffffff; /* white text */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me h3 {
+  color: #00ffff; /* cyan title to pop */
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.about-me a {
+  color: #ffffff; /* orange accent link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 
 /* Bottom Content */
