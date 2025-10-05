@@ -1,4 +1,4 @@
-/* Reset & Global */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #121212;
     color: #e0e0e0;
     line-height: 1.6;
@@ -15,43 +15,42 @@ body {
 
 /* Header */
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1f1f1f;
-    padding: 20px 40px;
+    padding: 15px 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    animation: fadeInTop 1s ease-out;
+    z-index: 1000;
 }
 
 .logo h1 {
-    font-size: 1.8rem;
-    color: #cad9db;
+    font-size: 1.6rem;
+    color: #00bcd4;
 }
 
 nav a {
-    margin-left: 20px;
-    color: #ffffff;
+    margin-left: 25px;
+    color: #cad9db;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav a:hover {
     color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
 }
 
 /* Hero Section */
-/* Hero Section (Updated) */
-
-section:first-of-type {
+.hero {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 40px;
-    /* Reduce space between image and text */
-    padding: 60px 40px;
+    padding: 80px 40px;
     flex-wrap: wrap;
     animation: fadeIn 1.2s ease-in;
 }
@@ -62,154 +61,176 @@ section:first-of-type {
 }
 
 .hero-text h1 {
-    margin-left: 10px;
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 0px;
     color: #00bcd4;
 }
 
+.hero-text h1 span {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
 .hero-text p {
-    margin-left: 10px;
     font-size: 1.2rem;
+    margin-bottom: 20px;
     color: #cfcfcf;
 }
 
-/* Image Styling - removes outer glow and merges with background */
-.hero-image {
-    size: 1000px;
-    margin-left: 100px;
-    flex-shrink: 0;
+.cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-right: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
 }
 
+.cta-btn {
+    background: #00bcd4;
+    color: #121212;
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    border: 2px solid #00bcd4;
+    color: #00bcd4;
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Hero Image */
 .hero-image img {
-    width: 450px;
+    width: 400px;
     border-radius: 12px;
-    background-color: transparent;
-    /* Ensure background is transparent */
-    box-shadow: none;
-    /* Remove glowing effect */
-    display: block;
-    mix-blend-mode: normal;
-    /* Ensure the image blends well */
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.2);
 }
+
+/* About Section */
 .about-me {
-  background-color: #1a1a1a; /* dark background */
-  color: #ffffff; /* white text */
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-  max-width: 600px;
-  line-height: 1.6;
-  font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-me h3 {
-    margin-right: 300px;
-  color: #00ffff; /* cyan title to pop */
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.about-me a {
-    margin-right: 150px;
-  color: #ffffff; /* orange accent link */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-
-
-/* Bottom Content */
-.bottom-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-    flex-wrap: wrap;
-    gap: 20px;
-    animation: fadeIn 2s ease-in;
-}
-
-.bottom-content div {
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
     background-color: #1f1f1f;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.2);
+    animation: fadeIn 1.5s ease-in;
+}
+
+.about-me h2 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/* Services */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #00bcd4;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1f1f1f;
     padding: 20px;
     border-radius: 12px;
+    width: 250px;
     box-shadow: 0 0 12px rgba(0, 188, 212, 0.2);
     transition: transform 0.3s;
 }
 
-.bottom-content div:hover {
+.card:hover {
     transform: translateY(-8px);
 }
 
-.bottom-content h3 {
-    margin-bottom: 15px;
-    color: #00bcd4;
+.card h3 {
+    color: #cad9db;
+    margin-bottom: 10px;
 }
 
-.bottom-content a {
-    color: #ffffff;
+/* Projects */
+.projects {
+    background-color: #1f1f1f;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 900px;
+    text-align: center;
+}
+
+.projects h2 {
+    color: #00bcd4;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.project-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #222;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00bcd4;
+    color: #121212;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-.bottom-content a:hover {
+/* Contact */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
     color: #00bcd4;
+    margin-bottom: 15px;
 }
 
-.bottom-content img {
-    width: 20px;
-    margin-left: 8px;
-    vertical-align: middle;
+.social-links a {
+    margin: 10px;
+    color: #cad9db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     font-size: 0.9rem;
     border-top: 1px solid #333;
+    color: #aaa;
 }
 
 /* Animations */
-@keyframes fadeInTop {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
