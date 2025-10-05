@@ -14,6 +14,8 @@
     <div class="logo">
       <h1>❯❯❯ Captured By Karan</h1>
     </div>
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Me</a>
@@ -26,7 +28,6 @@
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <!-- Hero Image -->
       <div class="hero-image">
         <img src="img/mebg.png" alt="Karan's photo">
       </div>
@@ -36,7 +37,6 @@
         <a href="PhotoGallery.html" class="cta-btn">View My Work</a>
         <a href="#contact" class="cta-btn secondary">Hire Me</a>
       </div>
-
     </section>
 
     <!-- About Section -->
@@ -45,8 +45,6 @@
       <p>
         Hi, I’m <strong>Karan</strong>, an Engineer and Photographer who loves capturing moments and
         turning them into timeless memories.  
-        Photography for me isn’t just about clicking pictures—it’s about telling stories, emotions, and perspectives
-        through my lens.  
       </p>
       <p>
         Along with my B-Tech studies at <strong>Netaji Subhas University of Technology</strong>, I have
@@ -100,6 +98,13 @@
     <p>&copy; 2025 Captured By Karan. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
