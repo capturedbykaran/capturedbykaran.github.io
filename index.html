@@ -4,75 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio - captured by Karan</title>
+  <title>Captured By Karan</title>
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <!-- logo and navigation should appear in the same row -->
     <div class="logo">
       <h1>❯❯❯ Captured By Karan</h1>
     </div>
-    <div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="PhotoGallery.html">My Photo Gallery</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="PhotoGallery.html">My Photo Gallery</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  <!-- <hr> -->
+
   <main>
+    <!-- Hero Section -->
     <section class="hero">
+      <!-- Hero Image -->
       <div class="hero-image">
-        <img src="img/mebg.png" alt="Karan's photo" width="1000">
+        <img src="img/mebg.png" alt="Karan's photo">
       </div>
       <div class="hero-text">
-        <h1>Hello!<br>I am Karan</h1>
-        <p>An Engineer & A Photographer</p>
+        <h1>Hello! <br> I am <span>Karan</span></h1>
+        <p>A B-Tech Undergraduate | Engineer | Photographer</p>
+        <a href="PhotoGallery.html" class="cta-btn">View My Work</a>
+        <a href="#contact" class="cta-btn secondary">Hire Me</a>
       </div>
 
-      <div class="about-me">
-        <h3>About Me</h3>
-        <p>Hi, this is Karan, <br>I love photography & videography <br>capturing lovely Moments and Memories, <br>through my lens. <br>
-          <a href="about.html">Learn more about me →</a>
-        </p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Karan</strong>, an Engineer and Photographer who loves capturing moments and
+        turning them into timeless memories.  
+        Photography for me isn’t just about clicking pictures—it’s about telling stories, emotions, and perspectives
+        through my lens.  
+      </p>
+      <p>
+        Along with my B-Tech studies at <strong>Netaji Subhas University of Technology</strong>, I have
+        been working on personal and freelance projects in photography, videography, and editing.
+      </p>
+      <a href="about.html" class="cta-link">Learn more about me →</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2>What I Offer</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Photography</h3>
+          <p>Portraits, events, landscapes – capturing authentic and timeless shots.</p>
+        </div>
+        <div class="card">
+          <h3>Videography</h3>
+          <p>High-quality cinematic videos, short films, and event coverage.</p>
+        </div>
+        <div class="card">
+          <h3>Editing</h3>
+          <p>Professional photo and video editing to bring out the best in every frame.</p>
+        </div>
       </div>
     </section>
-    <br>
-    <section>
-      <div class="bottom-content">
-        <div class="about-me">
-          <h3>About</h3>
-          <p>Hi, this is Karan, <br>a B-tech Undergraduate Student at <br>Netaji Subhas University of Technology. <br>
-            <a href="about.html">Learn more about me →</a>
-          </p>
-        </div>
-        <div class="my-work">
-          <h3>My Work</h3>
-          <p>I love to capture the beauty of the world through my lens. <br>
-            <a href="PhotoGallery.html">See my work →</a>
-          </p>
-        </div>
-        <div class="connect">
-          <h3>Connect with me</h3>
-          <p>Follow me on Instagram and YouTube to see my latest work. <br>
-            <a href="https://www.instagram.com/captured.by.karan/" target="_blank">Instagram<img src="img/instalogo.png"
-                alt="instalogo"></a>
-            <a href="https://www.youtube.com/@CapturedByKaran_5" target="_blank">YouTube<img src="img/ytlogo.png"
-                alt="ytlogo"></a>
-          </p>
-        </div>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2>My Projects</h2>
+      <div class="project-card">
+        <h3>Meesho Clone</h3>
+        <p>A responsive front-end design template of Meesho shopping app’s official website.</p>
+        <a href="https://capturedbykaran.github.io/meesho/" target="_blank">View Project</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Connect With Me</h2>
+      <p>Have a project in mind? Let’s collaborate!</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/captured.by.karan/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@CapturedByKaran_5" target="_blank">YouTube</a>
+        <a href="mailto:karansingh@example.com">Email Me</a>
+      </div>
     </section>
   </main>
-  <br>
+
   <footer>
-    <p>&copy; All the content is copyrighted to Karan.</p>
+    <p>&copy; 2025 Captured By Karan. All rights reserved.</p>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
-
-
 </html>
