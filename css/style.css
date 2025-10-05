@@ -125,7 +125,11 @@ nav a:hover {
     margin-bottom: 15px;
     font-size: 2rem;
 }
-
+.about-me a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
 /* Services */
 .services {
     padding: 60px 20px;
