@@ -2,221 +2,317 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me - captured by Karan/about</title>
-    <style>
-        /* Reset & Global */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me - Captured by Karan</title>
+  <style>
+    /* Reset & Global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #1f1f1f;
-            padding: 20px 40px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            animation: fadeInTop 1s ease-out;
-        }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 20px 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      animation: fadeInTop 1s ease-out;
+    }
 
-        .logo h1 {
-            font-size: 1.8rem;
-            color: #cad9db;
-        }
+    .logo h1 {
+      font-size: 1.8rem;
+      color: #cad9db;
+    }
 
-        nav a {
-            margin-left: 20px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
-        nav a:hover {
-            color: #00bcd4;
-        }
+    nav a {
+      margin-left: 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        /* Main Content Styling */
-        main {
-            padding: 60px 40px;
-            animation: fadeInUp 1.2s ease-out;
-        }
+    nav a:hover {
+      color: #00bcd4;
+    }
 
-        main h3 {
-            font-size: 2rem;
-            color: #00bcd4;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #cad9db;
+      font-size: 1.9rem;
+      cursor: pointer;
+    }
 
-        main h3::after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 3px;
-            background-color: #00bcd4;
-            bottom: -8px;
-            left: 0;
-            border-radius: 4px;
-        }
+    /* Main Content Styling */
+    main {
+      padding: 60px 40px;
+      animation: fadeInUp 1.2s ease-out;
+    }
 
-        main h4 {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
+    main h3 {
+      font-size: 2rem;
+      color: #00bcd4;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
 
-        /* Sections */
-        .about-me,
-        .education,
-        .skills {
-            margin-bottom: 50px;
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0, 188, 212, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    main h3::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background-color: #00bcd4;
+      bottom: -8px;
+      left: 0;
+      border-radius: 4px;
+    }
 
-        .about-me:hover,
-        .education:hover,
-        .skills:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 188, 212, 0.25);
-        }
+    main h4 {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
 
-        /* Lists */
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    /* Sections */
+    .about-me,
+    .education,
+    .skills {
+      margin-bottom: 50px;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 188, 212, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .education a {
+        color: #00bcd4;
+        text-decoration: none;
+    }
+    .about-me:hover,
+    .education:hover,
+    .skills:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.25);
+    }
 
-        ul li {
-            padding: 10px 0;
-            font-size: 1.05rem;
-            color: #dcdcdc;
-            position: relative;
-            padding-left: 24px;
-        }
+    /* Paragraph styling for about summary */
+    .about-summary {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-        ul li::before {
-            content: "➤";
-            position: absolute;
-            left: 0;
-            color: #00bcd4;
-            font-size: 0.9rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    /* Learn More button */
+    .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00bcd4;
+      border: 1px solid #00bcd4;
+      padding: 8px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-        /* Link Styling */
-        a {
-            color: #00bcd4;
-            text-decoration: none;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
+    .learn-more:hover {
+      background-color: #00bcd4;
+      color: #121212;
+    }
 
-        a:hover {
-            color: #ffffff;
-            border-bottom: 1px solid #00bcd4;
-        }
+    /* Lists */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+    ul li {
+      padding: 10px 0;
+      font-size: 1.05rem;
+      color: #dcdcdc;
+      position: relative;
+      padding-left: 24px;
+    }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    ul li::before {
+      content: "➤";
+      position: absolute;
+      left: 0;
+      color: #00bcd4;
+      font-size: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-        @keyframes fadeInTop {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInTop {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <!-- logo and navigation should appear in the same row -->
-        <div class="logo">
-            <h1>❯❯❯ Captured By Karan Directory</h1>
-        </div>
-        <div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="PhotoGallery.html">My Photo Gallery</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="about-me">
-            <h3>About Me</h3>
-            <ul>
-                <li>Name: Karan</li>
-                <li>Profession: Photographer & Software Developer</li>
-                <li>Date of Birth: 2nd August 2005</li>
-            </ul>
-        </div>
-        <div class="education">
-            <h3>Education</h3>
-            <ul>
-                <li>Currently pursuing B-Tech at <a href="http://www.nsut.ac.in/en/home" target="_blank">Netaji Subhas
-                        University of Technology, Delhi</a></li>
-                <li>Completed my schooling from <a href="https://www.cbse.gov.in/" target="_blank">RPVV (affiliated to
-                        CBSE)</a> Rohini, Delhi.</li>
-            </ul>
-        </div>
-        <div class="skills">
-            <h3>Skills</h3>
-            <h4>Technical Skills</h4>
-            <ul>
-                <li>Programming: Python, C++</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>Database Management: MySQL, MongoDB</li>
-            </ul>
-            <h4>Photography Skills</h4>
-            <ul>
-                <li>Camera Handling</li>
-                <li>Photo Editing: Adobe Photoshop, Lightroom</li>
-                <li>Videography: Adobe Premiere Pro</li>
-            </ul>
-            <h4>Soft Skills</h4>
-            <ul>
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Time Management</li>
-            </ul>
-        </div>
-    </main>
+  <header>
+    <div class="logo">
+      <h1>❯❯❯ Captured By Karan Directory</h1>
+    </div>
+    <div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Me</a>
+        <a href="/PhotoGallery.html">My Photo Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="about-me">
+      <h3>About Me</h3>
+
+      <!-- Compact summary paragraph -->
+      <p class="about-summary">
+        I’m <strong>Karan</strong>, an <strong>Engineer, Web Developer,</strong> and <strong>Photographer</strong> passionate about merging creativity with technology.
+        Currently pursuing <strong>B.Tech at NSUT</strong>, I specialize in <strong>C++, Python,</strong> and <strong>full-stack web development</strong>.
+        I create responsive websites and captivating visuals that bring ideas to life.
+        Beyond code, I love storytelling through <strong>photography and videography</strong>, capturing emotions with precision and art.
+      </p>
+
+      <a href="#learn-more" class="learn-more">Learn More →</a>
+
+      <ul>
+        <li>Name: Karan</li>
+        <li>Profession: Photographer & Software Developer</li>
+        <li>Date of Birth: 2nd August 2005</li>
+      </ul>
+    </div>
+
+    <div id="learn-more" class="education">
+      <h3>Education</h3>
+      <ul>
+        <li>Currently pursuing B-Tech at
+          <a href="http://www.nsut.ac.in/en/home" target="_blank">Netaji Subhas University of Technology, Delhi</a>
+        </li>
+        <li>Completed my schooling from
+          <a href="https://www.cbse.gov.in/" target="_blank">RPVV (affiliated to CBSE)</a>, Rohini, Delhi.
+        </li>
+      </ul>
+    </div>
+
+    <div class="skills">
+      <h3>Skills</h3>
+
+      <h4>Technical Skills</h4>
+      <ul>
+        <li>Programming: Python, C++</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database Management: MySQL, MongoDB</li>
+      </ul>
+
+      <h4>Photography Skills</h4>
+      <ul>
+        <li>Camera Handling</li>
+        <li>Photo Editing: Adobe Photoshop, Lightroom</li>
+        <li>Videography: Adobe Premiere Pro</li>
+      </ul>
+
+      <h4>Soft Skills</h4>
+      <ul>
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Toggle script -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    toggleButton.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+
 </body>
 
 </html>
